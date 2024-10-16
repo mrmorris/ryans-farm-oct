@@ -10,3 +10,4 @@ Material: Metal
 * Cat
 * Dog
 * Rat
+* Moose
