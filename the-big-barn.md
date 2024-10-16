@@ -1,11 +1,12 @@
-# The Barn
+# The Barn is Awesome
 
 ----
 
-Color: Red
+Color: Blue
 Material: Wood
 
 ## The Animals
 
 * Cat
 * Dog
+* Manatee
