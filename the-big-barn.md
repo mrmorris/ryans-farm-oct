@@ -8,3 +8,4 @@ Material: Wood
 ## The Animals
 
 * Cat
+* Dog
