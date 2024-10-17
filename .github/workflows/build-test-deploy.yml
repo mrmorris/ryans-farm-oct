@@ -21,4 +21,40 @@ jobs:
       - name: Run a multi-line script
         run: |
           ls -la
-          cat readme.md
+          echo "Hello from GitHub" >> build.md
+
+      - name: Upload the Build
+        uses: actions/upload-artifact@v4.4.3
+        with:
+          path: build.md
+
+  test:
+    runs-on: ubuntu-latest
+
+    needs: build
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo Running test suite...
+
+  deploy:
+    runs-on: ubuntu-latest
+
+    needs: test
+
+    environment: Production
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run a one-line script
+        run: echo I am deploying...
+
+      - name: Download the build...
+        uses: actions/download-artifact@v4.1.8
+
+      - name: View the build artifact
+        run: cat build.md
+
