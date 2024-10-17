@@ -39,6 +39,8 @@ jobs:
 
     needs: test
 
+    environment: Production
+
     steps:
       - uses: actions/checkout@v4
 
